@@ -1,0 +1,221 @@
+:root{
+    --color1: #BC1404;
+    --color2: #F7E13A ;
+    --font1:  "Hind Mysuru", sans-serif;
+    --fontTitle: "Knewave", system-ui;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+/* PORTADA */
+.portada{
+    margin: 0; /* Elimina márgenes del navegador */
+    width: 100%;
+    height: 100vh; /* Asegura que cubra toda la pantalla */
+    background: linear-gradient(to right, var(--color1) 75%, var(--color2) 75%);
+    overflow: hidden;
+}
+.menu{
+    /* background-color: aqua; */
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.menu .icono{
+    display: none;
+    color: #fff;
+}
+.menu .links{
+    padding: 0 15px;
+
+}
+.menu .links a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0 30px;
+    font-family: var(--font1);
+    /* border-bottom: 2px solid transparent; */
+}
+/* hover */
+.menu .links  a:hover {
+    
+    border-bottom: 3px solid #fff;
+  }
+.menu .logo {
+    width: 70px;
+    height: 70px;
+    padding: 0 10px;
+
+}
+.menu .logo img{
+    width: 100%;
+    height: 100%;
+}
+.contenedor{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    
+}
+
+.contenedor .seccion1,.seccion2{
+    text-align: center;
+}
+.contenedor .seccion1 h1{
+    padding: 0 0 0 50px;    
+    color: #fff;
+    font-family: var(--fontTitle);
+    font-size: 5em;
+    margin: 0;
+}
+.contenedor .seccion1 h3{
+    margin: 5px;
+    font-size: 2em;
+    font-family: var(--fontTitle);
+    color: #fff;
+}
+.contenedor .seccion1 .texto{
+    padding: 0 0 0 50px;
+    color: #fff;
+    font-family: var(--font1);
+    font-size: 15px;
+
+}
+.contenedor .seccion1 .texto button{
+    background-color: var(--color2);
+    border: none;
+    border-radius: 40px;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.iconos{
+    margin-top: 70px;
+    padding: 0 0 0 50px;
+    color: #fff;
+    font-size: 30px;
+}
+.iconos i{
+    cursor: pointer;
+    padding: 0 10px;
+}
+.iconos a{
+    color: #fff;
+}
+.seccion2{
+    width: 50%;
+}
+.seccion2 .imagen{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+}
+.seccion2 .imagen img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: drop-shadow(3px 3px 25px #fff);
+}
+
+
+
+@media screen and (max-width: 995px){
+    .contenedor{
+        padding-top: 0px;
+    }
+}
+@media screen and (max-width: 775px){
+    .contenedor .seccion1 h1{  
+        font-size: 4em;
+    }
+    .contenedor .seccion1 .texto{
+        padding: 0 20px;
+        color: #fff;
+        font-family: var(--font1);
+        font-size: 15px;
+    
+    }
+}
+@media screen and (max-width: 600px){
+    .menu .icono{
+        display: block;
+        z-index: 15;
+        color: #fff;
+        font-size: 40px;
+        margin: 0 20px;
+    }
+    .contenedor{
+        display: flex;
+        flex-direction: column;
+    }
+    .menu .links{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 0 15px;
+        background-color: orange;
+        width: 70%;
+        height: 100vh;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left:  -100%;
+        transition: left 0.3s ease; /* Transición para el efecto de deslizamiento */ 
+    }
+    .menu .links.active{
+        display: flex;
+        left: 0;
+    }
+
+    .contenedor .seccion1 h1{
+        padding: 0;
+        padding-top: 20px;    
+        font-size: 3.5em;
+    }
+    .contenedor .seccion1 h3{
+        margin: 0;
+        font-size: 1.5em;
+    }
+    .contenedor .seccion1 .texto{
+        padding: 0 50px;
+    }
+    .contenedor .seccion1 .texto button{
+        padding: 10px 30px;
+        font-size: 1em;
+    }
+    .iconos{
+        margin-top: 10px;
+        padding: 0;
+        font-size: 20px;
+    }
+    .iconos a{
+        color: #fff;
+        font-size: 50px;
+    }
+    .seccion2{
+        width: 100%;
+    }
+    .seccion2 .imagen{
+        width: 100%;
+        height: 300px;
+        display: flex;
+        align-items: center;
+    }
+    .seccion2 .imagen img{
+        width: 100%;
+        height: 100%;
+        
+    }
+    
+}
+@media screen and (max-width: 400px){
+    
+}
